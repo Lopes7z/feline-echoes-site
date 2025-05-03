@@ -24,7 +24,7 @@ export default function FelineEchoesGallery() {
   const [allEmotions, setAllEmotions] = useState([]);
   const [activeFilters, setActiveFilters] = useState([]);
   const [emotionCounts, setEmotionCounts] = useState({});
-  const [visibleCount, setVisibleCount] = useState(12);
+  const [visibleCount, setVisibleCount] = useState(20);
 
   const FILTER_EMOTIONS = [
     'Fear', 'Insecurity', 'Overwhelm', 'Guilt',
@@ -116,7 +116,7 @@ export default function FelineEchoesGallery() {
     });
 
   const visibleImages = filteredImages.slice(0, visibleCount);
-  const handleLoadMore = () => setVisibleCount((prev) => prev + 12);
+  const handleLoadMore = () => setVisibleCount((prev) => prev + 20);
 
   return (
     <div className={`${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} p-6 min-h-screen relative`}>
