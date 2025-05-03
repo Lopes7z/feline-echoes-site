@@ -24,6 +24,7 @@ export default function FelineEchoesGallery() {
   const [allEmotions, setAllEmotions] = useState([]);
   const [activeFilters, setActiveFilters] = useState([]);
   const [emotionCounts, setEmotionCounts] = useState({});
+  const [visibleCount, setVisibleCount] = useState(12);
 
   const FILTER_EMOTIONS = [
     'Fear', 'Insecurity', 'Overwhelm', 'Guilt',
@@ -114,6 +115,9 @@ export default function FelineEchoesGallery() {
       return bCount - aCount;
     });
 
+  const visibleImages = filteredImages.slice(0, visibleCount);
+  const handleLoadMore = () => setVisibleCount((prev) => prev + 12);
+
   return (
     <div className={`${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} p-6 min-h-screen relative`}>
       <button
@@ -124,25 +128,26 @@ export default function FelineEchoesGallery() {
       </button>
 
       <h1 className="text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
-  {[..."Feline Echoes"].map((char, i) => (
-    <span
-      key={i}
-      className="inline-block transition duration-1000 ease-out hover:opacity-0 hover:-translate-y-1 hover:rotate-2"
-    >
-      {char === ' ' ? ' ' : char}
-    </span>
-  ))}
-</h1>
-<p className="text-center text-lg italic text-blaxk-200 mb-6 max-w-2xl mx-auto leading-relaxed">
-  {[...`Feline Echoes is a collection of 1,147 emotional NFT ArtWorks on Cardano. Each cat whispers something unspoken. Mint now on JPG Store.`].map((char, i) => (
-    <span
-      key={i}
-      className="inline-block transition duration-1000 ease-out hover:opacity-0 hover:-translate-y-1 hover:rotate-2"
-    >
-      {char === ' ' ? ' ' : char}
-    </span>
-  ))}
-</p>
+        {[..."Feline Echoes"].map((char, i) => (
+          <span
+            key={i}
+            className="inline-block transition duration-1000 ease-out hover:opacity-0 hover:-translate-y-1 hover:rotate-2"
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </span>
+        ))}
+      </h1>
+
+      <p className="text-center text-lg italic text-blaxk-200 mb-6 max-w-2xl mx-auto leading-relaxed">
+        {[...`Feline Echoes is a collection of 1,147 emotional NFT ArtWorks on Cardano. Each cat whispers something unspoken. Mint now on JPG Store.`].map((char, i) => (
+          <span
+            key={i}
+            className="inline-block transition duration-1000 ease-out hover:opacity-0 hover:-translate-y-1 hover:rotate-2"
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </span>
+        ))}
+      </p>
 
       <div className="flex flex-wrap justify-center gap-2 mb-4">
         {FILTER_EMOTIONS.map((emotion) => (
@@ -188,7 +193,6 @@ export default function FelineEchoesGallery() {
           value={selectedEmotion2}
           onChange={(e) => setSelectedEmotion2(e.target.value)}
           className={`px-4 py-2 rounded-md border-2 focus:outline-none transition-all duration-300 hover:ring-2 hover:ring-silver-400 hover:shadow-lg ${
-
             isDarkMode ? 'bg-black text-white border-white/60' : 'bg-white text-black border-black/60'
           }`}
         >
@@ -217,7 +221,7 @@ export default function FelineEchoesGallery() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-        {filteredImages.map((img) => (
+        {visibleImages.map((img) => (
           <motion.div
             key={img.id}
             whileHover={{ scale: 1.05 }}
@@ -231,6 +235,12 @@ export default function FelineEchoesGallery() {
               alt={img.emotion.join(', ')}
               className="w-full h-80 object-cover"
               loading="lazy"
+              onError={(e) => {
+                const src = e.target.src;
+                setTimeout(() => {
+                  e.target.src = src;
+                }, 1000);
+              }}
             />
             <div className="p-3 text-center">
               <p className="text-sm opacity-70 font-medium tracking-wide">{img.title}</p>
@@ -248,6 +258,17 @@ export default function FelineEchoesGallery() {
           </motion.div>
         ))}
       </div>
+
+      {visibleCount < filteredImages.length && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={handleLoadMore}
+            className="px-6 py-2 text-sm font-medium border rounded-full shadow hover:shadow-lg hover:scale-105 transition"
+          >
+            Carregar mais
+          </button>
+        </div>
+      )}
 
       {modalImage && (
         <div
