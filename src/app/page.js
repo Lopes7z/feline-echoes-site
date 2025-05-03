@@ -263,17 +263,21 @@ export default function FelineEchoesGallery() {
         <div className="flex justify-center mt-8">
           <motion.button
   onClick={handleLoadMore}
-  whileTap={{ scale: 0.9 }}
-  className="px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition flex items-center gap-2"
+  whileTap={{ scale: 0.95 }}
+  className={`px-5 py-2 rounded-full border-2 font-medium tracking-wide transition-all duration-300 shadow-sm text-sm hover:shadow-md hover:scale-105 hover:ring-2 hover:ring-silver-400 ${
+    isDarkMode
+      ? 'bg-black text-white border-white/30 hover:bg-white hover:text-black'
+      : 'bg-white text-black border-black/30 hover:bg-black hover:text-white'
+  } flex items-center gap-2`}
   disabled={loadingMore}
 >
-  {loadingMore ? (
+  {loadingMore && (
     <motion.div
       animate={{ rotate: 360 }}
       transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
-      className="w-4 h-4 border-2 border-t-transparent border-white rounded-full"
+      className="w-4 h-4 border-2 border-t-transparent border-current rounded-full"
     />
-  ) : null}
+  )}
   {loadingMore ? 'Carregando...' : 'Carregar mais'}
 </motion.button>
         </div>
