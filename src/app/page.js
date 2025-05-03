@@ -25,7 +25,8 @@ export default function FelineEchoesGallery() {
   const [activeFilters, setActiveFilters] = useState([]);
   const [emotionCounts, setEmotionCounts] = useState({});
   const [visibleCount, setVisibleCount] = useState(20);
-
+  const [loadingMore, setLoadingMore] = useState(false);
+  
   const FILTER_EMOTIONS = [
     'Fear', 'Insecurity', 'Overwhelm', 'Guilt',
     'Solitude', 'Grief', 'Silence', 'Emptiness',
