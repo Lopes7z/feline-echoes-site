@@ -261,12 +261,21 @@ export default function FelineEchoesGallery() {
 
       {visibleCount < filteredImages.length && (
         <div className="flex justify-center mt-8">
-          <button
-            onClick={handleLoadMore}
-            className="px-6 py-2 text-sm font-medium border rounded-full shadow hover:shadow-lg hover:scale-105 transition"
-          >
-            Carregar mais
-          </button>
+          <motion.button
+  onClick={handleLoadMore}
+  whileTap={{ scale: 0.9 }}
+  className="px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition flex items-center gap-2"
+  disabled={loadingMore}
+>
+  {loadingMore ? (
+    <motion.div
+      animate={{ rotate: 360 }}
+      transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
+      className="w-4 h-4 border-2 border-t-transparent border-white rounded-full"
+    />
+  ) : null}
+  {loadingMore ? 'Carregando...' : 'Carregar mais'}
+</motion.button>
         </div>
       )}
 
