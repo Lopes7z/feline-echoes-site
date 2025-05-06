@@ -122,6 +122,12 @@ export default function FelineEchoesGallery() {
 
   return (
     <div className={`${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} p-6 min-h-screen relative`}>
+      <a
+  href="#about"
+  className="fixed top-2 sm:top-4 left-2 sm:left-4 border px-3 py-1 rounded-full text-sm hover:opacity-75 z-50"
+>
+  About
+</a>
       <button
         onClick={() => setIsDarkMode(!isDarkMode)}
         className="fixed top-2 sm:top-4 right-2 sm:right-4 border px-3 py-1 rounded-full text-sm hover:opacity-75 z-50"
@@ -294,6 +300,71 @@ export default function FelineEchoesGallery() {
           <p className="text-white text-sm mt-1">(click anywhere to close)</p>
         </div>
       )}
+      <div id="about" className="mt-20 max-w-3xl mx-auto text-center px-4 py-10">
+  <h2 className="text-2xl sm:text-3xl font-bold mb-6 font-serif">About the Project</h2>
+  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+  <div className="text-base sm:text-lg leading-relaxed md:w-1/2">
+    <p className="mb-4">
+      <strong>Feline Echoes</strong> is a collection of 1,147 digital artworks that explore the depths of human emotion
+      through the silent gaze of cats — quiet observers turned mirrors of the soul. Each piece echoes feelings we often
+      struggle to express in words: sorrow, hope, loss, guilt, longing, and forgiveness.
+    </p>
+    <p className="mb-4">
+      This collection was created with a sensitive and intentional eye, aiming to connect emotionally broken individuals
+      with images that whisper exactly what they feel — even when they don’t know how to say it.
+    </p>
+  </div>
+  <img
+    src="https://gateway.pinata.cloud/ipfs/QmfSbno54M7XTP7hipX3ZPBE2bPJ6qdXyhJu7nBp36NXip"
+    alt="Feline Echo Project"
+    className="w-96 h-96 rounded-2xl object-cover shadow-lg md:w-1/2"
+  />
+</div>
+  <h2 className="text-2xl sm:text-3xl font-bold mb-6 font-serif mt-10">About the Creator</h2>
+  <div className="flex flex-col md:flex-row items-center gap-6">
+  <img
+    src="https://gateway.pinata.cloud/ipfs/QmR4ZNPsx97YbvtbAGQbDNDMe78KSXMJr1RaV6K9o97e3B"
+    alt="Alisson Lopes"
+    className="w-96 h-96 rounded-2xl object-cover shadow-lg"
+  />
+  <div className="text-base sm:text-lg leading-relaxed">
+    <p className="mb-4">
+      I am <strong>A. L</strong> — a Christian pastor, conceptual artist, and the mind behind Feline Echoes.
+      As someone who walks daily with people through stories of pain, faith, and redemption, I’ve come to understand how
+      deeply we carry unspoken emotions.
+    </p>
+    <p className="mb-4">
+      This project is born from the fusion of my faith, my pastoral journey, and my passion for art, silence, and digital
+      expression.
+    </p>
+    <p className="italic">
+      Feline Echoes is not about cats. <br />
+      It’s about you. <br />
+      It’s about me. <br />
+      It’s about everything we’ve felt but never said.
+    </p>
+  </div>
+</div>
+  <h2 className="text-2xl sm:text-3xl font-bold mb-6 font-serif mt-10">Vision and Future</h2>
+  <div className="flex flex-col md:flex-row items-center gap-6 mt-10">
+  <div className="text-base sm:text-lg leading-relaxed md:w-1/2">
+    <p className="mb-4">
+      The first phase — <strong>Core Emotions</strong> — captures the fundamental feelings that shape the human experience.
+      Future phases will explore healing, reconnection, and transcendence.
+    </p>
+    <p>
+      Our mission is simple: <strong>to touch souls with illustrated silence</strong>. In the near future, we aim to expand
+      this universe through physical editions, immersive experiences, and emotionally-driven exhibitions — digital and
+      beyond.
+    </p>
+  </div>
+  <img
+    src="https://gateway.pinata.cloud/ipfs/QmYoB1WpX8J8rExA8vYwupShYaYWzm3eweFpwiFimPuHKw"
+    alt="Vision and Future"
+    className="w-96 h-96 rounded-2xl object-cover shadow-lg md:w-1/2"
+  />
+</div>
+</div>
     </div>
   );
 }
