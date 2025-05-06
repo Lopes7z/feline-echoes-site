@@ -329,7 +329,7 @@ export default function FelineEchoesGallery() {
   />
   <div className="text-base sm:text-lg leading-relaxed">
     <p className="mb-4">
-      I am <strong>A. L</strong> — a Christian pastor, conceptual artist, and the mind behind Feline Echoes.
+      I am <strong>A. L.</strong> — a Christian pastor, conceptual artist, and the mind behind Feline Echoes.
       As someone who walks daily with people through stories of pain, faith, and redemption, I’ve come to understand how
       deeply we carry unspoken emotions.
     </p>
