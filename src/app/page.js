@@ -140,7 +140,9 @@ export default function FelineEchoesGallery() {
         ))}
       </h1>
 
-      <p className="text-center text-base sm:text-lg italic text-black/70 mb-6 max-w-2xl mx-auto leading-relaxed">
+      <p className={`text-center text-base sm:text-lg italic mb-6 max-w-2xl mx-auto leading-relaxed ${
+  isDarkMode ? 'text-white/70' : 'text-black/70'
+}`}>
         {[...`Feline Echoes is a collection of 1,147 emotional NFT ArtWorks on Cardano. Each cat whispers something unspoken. Mint now on JPG Store.`].map((char, i) => (
           <span
             key={i}
