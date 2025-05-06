@@ -26,10 +26,11 @@ export default function FelineEchoesGallery() {
   const [emotionCounts, setEmotionCounts] = useState({});
   const [visibleCount, setVisibleCount] = useState(20);
   const [loadingMore, setLoadingMore] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   
   const FILTER_EMOTIONS = [
-    'Fear', 'Insecurity', 'Overwhelm', 'Guilt',
-    'Solitude', 'Grief', 'Silence', 'Emptiness',
+    'Fear', 'Overwhelm', 'Guilt',
+    'Solitude', 'Grief', 'Emptiness',
     'Hope', 'Love',
   ];
 
@@ -123,12 +124,12 @@ export default function FelineEchoesGallery() {
     <div className={`${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} p-6 min-h-screen relative`}>
       <button
         onClick={() => setIsDarkMode(!isDarkMode)}
-        className="fixed top-4 right-4 border px-3 py-1 rounded-full text-sm hover:opacity-75 z-50"
+        className="fixed top-2 sm:top-4 right-2 sm:right-4 border px-3 py-1 rounded-full text-sm hover:opacity-75 z-50"
       >
         {isDarkMode ? '☀ Light Mode' : '🌙 Dark Mode'}
       </button>
 
-      <h1 className="text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
+      <h1 className="mt-12 sm:mt-4 text-3xl sm:text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
         {[..."Feline Echoes"].map((char, i) => (
           <span
             key={i}
@@ -139,7 +140,7 @@ export default function FelineEchoesGallery() {
         ))}
       </h1>
 
-      <p className="text-center text-lg italic text-blaxk-200 mb-6 max-w-2xl mx-auto leading-relaxed">
+      <p className="text-center text-base sm:text-lg italic text-black/70 mb-6 max-w-2xl mx-auto leading-relaxed">
         {[...`Feline Echoes is a collection of 1,147 emotional NFT ArtWorks on Cardano. Each cat whispers something unspoken. Mint now on JPG Store.`].map((char, i) => (
           <span
             key={i}
