@@ -1,4 +1,3 @@
-// layout.js (src/app/layout.js)
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -14,8 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Feline Echoes – Emotional NFT Collection",
-  description:
-    "Feline Echoes is a poetic NFT collection of emotional cats. Each piece whispers something unspoken.",
+  description: "Feline Echoes is a poetic NFT collection of emotional cats. Each piece whispers something unspoken.",
   manifest: "/site.webmanifest",
   icons: [
     {
@@ -51,6 +49,7 @@ export const metadata = {
     {
       rel: "icon",
       url: "/favicon.ico",
+      sizes: "48x48",
       type: "image/x-icon",
     },
   ],
