@@ -470,21 +470,21 @@ export default function FelineEchoesGallery() {
   <div className="text-base sm:text-lg leading-relaxed md:w-1/2 text-left">
     <p className="mb-4">
       <strong>PHASE 1 — Public Whitelist</strong><br />
-      🗓 May 20, 2025 – May 27, 2025<br />
+      🗓 May 20, 2025 – May 17, 2025<br />
       🎟 147 NFTs<br />
       💰 Price: 49 ADA<br />
       🔓 No wallet limit — up to 10 per transaction
     </p>
     <p className="mb-4">
       <strong>PHASE 2 — Echo Gallery</strong><br />
-      🗓 May 27, 2025 – June 3, 2025<br />
+      🗓 May 27, 2025 – May 24, 2025<br />
       🎟 400 NFTs<br />
       💰 Price: 99 ADA<br />
       🔓 No wallet limit — up to 10 per transaction
     </p>
     <p>
       <strong>PHASE 3 — Silent Auction</strong><br />
-      🗓 June 3, 2025 – June 10, 2025<br />
+      🗓 June 3, 2025 – May 31, 2025<br />
       🎟 600 NFTs<br />
       💰 Price: 199 ADA<br />
       🔓 No wallet limit — up to 10 per transaction
