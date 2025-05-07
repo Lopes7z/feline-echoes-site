@@ -153,7 +153,7 @@ export default function FelineEchoesGallery() {
       onMouseLeave={() => setHoveredId(null)}
     >
       <a
-        href="https://www.jpg.store/collection/felineechoes"
+        href="https://www.jpg.store/collection/90e2bc637fd4871b3c1ae82ed68ca3099552869cf1d8ad42c0b26c22?tab=minting"
         target="_blank"
         rel="noopener noreferrer"
         className={`px-4 py-1 rounded-full border-2 font-medium tracking-wide text-sm transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:scale-105 hover:ring-2 hover:ring-yellow-300 pulse-gold-bg ${
