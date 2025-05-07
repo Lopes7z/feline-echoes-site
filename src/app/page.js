@@ -122,28 +122,88 @@ export default function FelineEchoesGallery() {
 
   return (
     <div className={`${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} p-6 min-h-screen relative`}>
-     <div className="fixed top-2 sm:top-4 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8">
-  <a
-    href="#about"
-    className="border px-3 py-1 rounded-full text-sm hover:opacity-75"
-  >
-    About
-  </a>
+<div className="fixed top-2 sm:top-4 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8">
+  {/* Left-side buttons */}
+  <div className="flex gap-2">
+    <a
+      href="#about"
+      className={`px-4 py-1 rounded-full border-2 font-medium tracking-wide text-sm transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105 hover:ring-2 hover:ring-silver-400 ${
+        isDarkMode
+          ? 'bg-black text-white border-white/30 hover:border-white'
+          : 'bg-white text-black border-black/30 hover:border-black'
+      }`}
+    >
+      About
+    </a>
 
-  <a
-    href="#nft-economics"
-    className="border px-3 py-1 rounded-full text-sm hover:opacity-75"
-  >
-    NFT Economics
-  </a>
+    <a
+      href="#nft-economics"
+      className={`px-4 py-1 rounded-full border-2 font-medium tracking-wide text-sm transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105 hover:ring-2 hover:ring-silver-400 ${
+        isDarkMode
+          ? 'bg-black text-white border-white/30 hover:border-white'
+          : 'bg-white text-black border-black/30 hover:border-black'
+      }`}
+    >
+      NFT Economics
+    </a>
 
+    <div
+      className="relative flex flex-col items-center group"
+      onMouseEnter={() => setHoveredId('mint')}
+      onMouseLeave={() => setHoveredId(null)}
+    >
+      <a
+        href="https://www.jpg.store/collection/felineechoes"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`px-4 py-1 rounded-full border-2 font-medium tracking-wide text-sm transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:scale-105 hover:ring-2 hover:ring-yellow-300 pulse-gold-bg ${
+          isDarkMode
+            ? 'text-white border-white'
+            : 'text-black border-black'
+        }`}
+      >
+        Mint
+      </a>
+
+      {hoveredId === 'mint' && (
+  <p
+    className={`absolute top-full mt-2 text-xs italic text-center font-serif whitespace-nowrap tracking-wide px-3 py-1 rounded ${
+      isDarkMode ? 'text-white/80' : 'text-black/80'
+    }`}
+    style={{ whiteSpace: 'nowrap' }}
+  >
+    {'A single click. A permanent emotion.'.split(' ').map((word, index) => (
+      <span
+        key={index}
+        className="word-fade-in"
+        style={{
+          animationDelay: `${index * 0.3}s`,
+          display: 'inline-block',
+          marginRight: '0.25em',
+        }}
+      >
+        {word}
+      </span>
+    ))}
+  </p>
+)}
+
+    </div>
+  </div>
+
+  {/* Right-side dark/light toggle */}
   <button
     onClick={() => setIsDarkMode(!isDarkMode)}
-    className="border px-3 py-1 rounded-full text-sm hover:opacity-75"
+    className={`px-4 py-1 rounded-full border-2 font-medium tracking-wide text-sm transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105 hover:ring-2 hover:ring-silver-400 ${
+      isDarkMode
+        ? 'bg-black text-white border-white/30 hover:border-white'
+        : 'bg-white text-black border-black/30 hover:border-black'
+    }`}
   >
     {isDarkMode ? '☀ Light Mode' : '🌙 Dark Mode'}
   </button>
 </div>
+
       <h1 className="mt-12 sm:mt-14 text-3xl sm:text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
         {[..."Feline Echoes"].map((char, i) => (
           <span
