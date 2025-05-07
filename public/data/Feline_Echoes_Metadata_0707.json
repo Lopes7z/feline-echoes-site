@@ -494,6 +494,15 @@
     "Echo Phase": "Core Emotions",
     "Emotion": "Devotion / Clarity"
   },
+  "feline_echo_0056": {
+    "name": "Feline Echo #0056 — Symbols in Stillness",
+    "description": "Light became presence in deep silence.",
+    "project": "Feline Echoes",
+    "image": "ipfs://QmfTNQ6Y4du8wAWMVLKxVUUnw9dC2B2E9WYjRJ1cvH46iH",
+    "mediaType": "image/webp",
+    "Echo Phase": "Core Emotions",
+    "Emotion": "Spirituality / Wonder"
+  },
   "feline_echo_0057": {
     "name": "Feline Echo #0057 — Walked With Thanks",
     "description": "I held the goodbye longer than I held your hand.",
@@ -6182,6 +6191,15 @@
     "Echo Phase": "Core Emotions",
     "Emotion": "Regret / Stillness"
   },
+  "feline_echo_0689": {
+    "name": "Feline Echo #0689 — Sat Without Asking",
+    "description": "Stillness taught more than any word could.",
+    "project": "Feline Echoes",
+    "image": "ipfs://QmTijWTV9HMLLdu86XKzLCgHT9bo6WBNB1h3wWAjRxZ4Ty",
+    "mediaType": "image/webp",
+    "Echo Phase": "Core Emotions",
+    "Emotion": "Reverence / Serenity"
+  },
   "feline_echo_0690": {
     "name": "Feline Echo #0690 — What Remained Grew",
     "description": "I didn’t move fast — I moved deeply.",
@@ -9503,6 +9521,15 @@
     "Echo Phase": "Core Emotions",
     "Emotion": "Innocence / Affection"
   },
+  "feline_echo_1059": {
+    "name": "Feline Echo #1059 — Played With Stars",
+    "description": "Magic isn’t imagined — it’s remembered.",
+    "project": "Feline Echoes",
+    "image": "ipfs://QmNcRr6YtEPaMMSrUFcbpdKQAQW9nsceB1EXZKnC5S8VTd",
+    "mediaType": "image/webp",
+    "Echo Phase": "Core Emotions",
+    "Emotion": "Imagination / Joy"
+ },
   "feline_echo_1060": {
     "name": "Feline Echo #1060 — Braver Than Small",
     "description": "What hurt faded slowly.",
