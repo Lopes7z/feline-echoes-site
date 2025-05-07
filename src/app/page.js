@@ -204,7 +204,7 @@ export default function FelineEchoesGallery() {
   </button>
 </div>
 
-      <h1 className="mt-14 sm:mt-16 text-3xl sm:text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
+      <h1 className="mt-18 sm:mt-20 text-3xl sm:text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
         {[..."Feline Echoes"].map((char, i) => (
           <span
             key={i}
