@@ -122,20 +122,29 @@ export default function FelineEchoesGallery() {
 
   return (
     <div className={`${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} p-6 min-h-screen relative`}>
-      <a
-  href="#about"
-  className="fixed top-2 sm:top-4 left-2 sm:left-4 border px-3 py-1 rounded-full text-sm hover:opacity-75 z-50"
->
-  About
-</a>
-      <button
-        onClick={() => setIsDarkMode(!isDarkMode)}
-        className="fixed top-2 sm:top-4 right-2 sm:right-4 border px-3 py-1 rounded-full text-sm hover:opacity-75 z-50"
-      >
-        {isDarkMode ? '☀ Light Mode' : '🌙 Dark Mode'}
-      </button>
+     <div className="fixed top-2 sm:top-4 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8">
+  <a
+    href="#about"
+    className="border px-3 py-1 rounded-full text-sm hover:opacity-75"
+  >
+    About
+  </a>
 
-      <h1 className="mt-12 sm:mt-4 text-3xl sm:text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
+  <a
+    href="#nft-economics"
+    className="border px-3 py-1 rounded-full text-sm hover:opacity-75"
+  >
+    NFT Economics
+  </a>
+
+  <button
+    onClick={() => setIsDarkMode(!isDarkMode)}
+    className="border px-3 py-1 rounded-full text-sm hover:opacity-75"
+  >
+    {isDarkMode ? '☀ Light Mode' : '🌙 Dark Mode'}
+  </button>
+</div>
+      <h1 className="mt-12 sm:mt-14 text-3xl sm:text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
         {[..."Feline Echoes"].map((char, i) => (
           <span
             key={i}
@@ -300,7 +309,7 @@ export default function FelineEchoesGallery() {
           <p className="text-white text-sm mt-1">(click anywhere to close)</p>
         </div>
       )}
-      <div id="about" className="mt-20 max-w-3xl mx-auto text-center px-4 py-10">
+      <div id="about" className="scroll-mt-12 mt-14 max-w-3xl mx-auto text-center px-4 py-10">
   <h2 className="text-2xl sm:text-3xl font-bold mb-6 font-serif">About the Project</h2>
   <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
   <div className="text-base sm:text-lg leading-relaxed md:w-1/2">
@@ -365,6 +374,93 @@ export default function FelineEchoesGallery() {
   />
 </div>
 </div>
+<div id="nft-economics" className="scroll-mt-12 mt-14 max-w-3xl mx-auto px-4 py-10 text-center">
+<h2 className="text-2xl sm:text-3xl font-bold mb-6 font-serif">NFT Economics</h2>
+<div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+  <div className="text-base sm:text-lg leading-relaxed md:w-1/2">
+    <p className="mb-4">
+      <strong>NFTomics</strong> — or NFT economics — is how we structure the emotional and financial logic behind the collection.
+    </p>
+    <p className="mb-4">
+      Feline Echoes is not a generative project. Each piece is individually created, deeply intentional, and emotionally loaded. 
+      The mint price is not just a number — it reflects the value of unique visual art that speaks what many cannot say.
+    </p>
+    <p className="mb-4">
+      This collection is about building something meaningful — not just minting quickly, but creating a lasting emotional archive. 
+      Every phase funds this artistic mission and honors the silence inside each artwork.
+    </p>
+    <p>
+      Minting here is not just a transaction. It’s participation in a journey.
+    </p>
+  </div>
+  <img
+    src="https://gateway.pinata.cloud/ipfs/QmYCQASVEkxuWYWjwA1dC51HcUdwhiLzaJPUQ3eR5V74hV"
+    alt="NFT Economics"
+    className="w-96 h-96 rounded-2xl object-cover shadow-lg md:w-1/2"
+  />
+</div>
+
+<h2 className="text-2xl sm:text-3xl font-bold mb-6 font-serif mt-10">Minting Phases</h2>
+<div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+  <img
+    src="https://gateway.pinata.cloud/ipfs/QmdwP9xbg6tZFxbwhbVsB4QnMNtS4nSv4ttoNoKS3Tqmpo"
+    alt="Minting Phases"
+    className="w-96 h-96 rounded-2xl object-cover shadow-lg md:w-1/2"
+  />
+  <div className="text-base sm:text-lg leading-relaxed md:w-1/2 text-left">
+    <p className="mb-4">
+      <strong>PHASE 1 — Public Whitelist</strong><br />
+      🗓 May 20, 2025 – May 27, 2025<br />
+      🎟 147 NFTs<br />
+      💰 Price: 49 ADA<br />
+      🔓 No wallet limit — up to 10 per transaction
+    </p>
+    <p className="mb-4">
+      <strong>PHASE 2 — Echo Gallery</strong><br />
+      🗓 May 27, 2025 – June 3, 2025<br />
+      🎟 400 NFTs<br />
+      💰 Price: 99 ADA<br />
+      🔓 No wallet limit — up to 10 per transaction
+    </p>
+    <p>
+      <strong>PHASE 3 — Silent Auction</strong><br />
+      🗓 June 3, 2025 – June 10, 2025<br />
+      🎟 600 NFTs<br />
+      💰 Price: 199 ADA<br />
+      🔓 No wallet limit — up to 10 per transaction
+    </p>
+  </div>
+</div>
+
+<h2 className="text-2xl sm:text-3xl font-bold mb-6 font-serif mt-10">How Value Grows</h2>
+<div className="flex flex-col md:flex-row items-center gap-6">
+  <div className="text-base sm:text-lg leading-relaxed md:w-1/2">
+    <p className="mb-4">
+      The price rises — not because of hype, but because of depth.
+    </p>
+    <p className="mb-4">
+      Each NFT in Feline Echoes is handcrafted with care, representing emotions that are often silenced. 
+      As the phases progress, the collection matures — echoing the journey of healing, self-awareness, and emotional clarity.
+    </p>
+    <ul className="mb-4 list-disc list-inside">
+      <li>Early collectors are rewarded with lower mint prices.</li>
+      <li>Later phases reflect greater refinement and significance.</li>
+      <li>No two pieces are the same. Each one whispers something unspoken.</li>
+    </ul>
+    <p>
+      This is not about flipping.<br />
+      It’s about feeling.<br />
+      It’s about echoing what words alone can’t express.
+    </p>
+  </div>
+  <img
+    src="https://gateway.pinata.cloud/ipfs/QmPjabK6KyQs5yxg9x481UvT8Mww5Cz88okV6fwG5qmkRB"
+    alt="How Value Grows"
+    className="w-96 h-96 rounded-2xl object-cover shadow-lg md:w-1/2"
+  />
+</div>
+</div>
+
     </div>
   );
 }
