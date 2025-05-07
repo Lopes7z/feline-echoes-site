@@ -121,7 +121,7 @@ export default function FelineEchoesGallery() {
   const handleLoadMore = () => setVisibleCount((prev) => prev + 20);
 
   return (
-    <div className={`${isDarkMode ? 'bg-[#000509] text-white' : 'bg-white text-black'} p-6 min-h-screen relative`}>
+    <div className={`${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} p-6 min-h-screen relative`}>
 <div className="fixed top-2 sm:top-4 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8">
   {/* Left-side buttons */}
   <div className="flex gap-2">
