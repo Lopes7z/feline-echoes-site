@@ -204,7 +204,7 @@ export default function FelineEchoesGallery() {
   </button>
 </div>
 
-      <h1 className="mt-12 sm:mt-14 text-3xl sm:text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
+      <h1 className="mt-14 sm:mt-16 text-3xl sm:text-5xl font-serif font-semibold mb-2 text-center tracking-wide">
         {[..."Feline Echoes"].map((char, i) => (
           <span
             key={i}
@@ -369,7 +369,7 @@ export default function FelineEchoesGallery() {
           <p className="text-white text-sm mt-1">(click anywhere to close)</p>
         </div>
       )}
-      <div id="about" className="scroll-mt-12 mt-14 max-w-3xl mx-auto text-center px-4 py-10">
+      <div id="about" className="scroll-mt-14 mt-16 max-w-3xl mx-auto text-center px-4 py-10">
   <h2 className="text-2xl sm:text-3xl font-bold mb-6 font-serif">About the Project</h2>
   <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
   <div className="text-base sm:text-lg leading-relaxed md:w-1/2">
@@ -434,7 +434,7 @@ export default function FelineEchoesGallery() {
   />
 </div>
 </div>
-<div id="nft-economics" className="scroll-mt-12 mt-14 max-w-3xl mx-auto px-4 py-10 text-center">
+<div id="nft-economics" className="scroll-mt-14 mt-16 max-w-3xl mx-auto px-4 py-10 text-center">
 <h2 className="text-2xl sm:text-3xl font-bold mb-6 font-serif">NFT Economics</h2>
 <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
   <div className="text-base sm:text-lg leading-relaxed md:w-1/2">
